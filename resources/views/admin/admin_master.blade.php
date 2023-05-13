@@ -22,11 +22,13 @@
 
         <!-- Bootstrap Css -->
         <link href="{{asset('/backend/assets/css/bootstrap.min.css')}} " id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> --}}
         <!-- Icons Css -->
         <link href="{{asset('/backend/assets/css/icons.min.css')}} " rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="{{asset('/backend/assets/css/app.min.css')}} " id="app-style" rel="stylesheet" type="text/css" />
-
+        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pizza/0.0.1/app.min.css"> --}}
     </head>
 
     <body data-topbar="dark">
@@ -113,7 +115,7 @@
         <div class="rightbar-overlay"></div>
 
         <!-- JAVASCRIPT -->
-        <script src="{{asset('/backend/assets/libs/jquery/jquery.min.js')}} "></script>
+        {{-- <script src="{{asset('/backend/assets/libs/jquery/jquery.min.js')}} "></script> --}}
         <script src="{{asset('/backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}} "></script>
         <script src="{{asset('/backend/assets/libs/metismenu/metisMenu.min.js')}} "></script>
         <script src="{{asset('/backend/assets/libs/simplebar/simplebar.min.js')}} "></script>
@@ -122,7 +124,7 @@
 
         <!-- apexcharts -->
         <script src="{{asset('/backend/assets/libs/apexcharts/apexcharts.min.js')}} "></script>
-
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
         <!-- jquery.vectormap map -->
         <script src="{{asset('/backend/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js')}} "></script>
         <script src="{{asset('/backend/assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js')}} "></script>
@@ -137,8 +139,10 @@
 
         <script src="{{asset('/backend/assets/js/pages/dashboard.init.js')}} "></script>
 
+
         <!-- App js -->
         <script src="{{asset('/backend/assets/js/app.js')}} "></script>
+
     </body>
 
 </html>
