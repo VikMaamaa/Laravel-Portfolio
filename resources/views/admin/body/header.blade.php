@@ -47,6 +47,13 @@
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="ri-apps-2-line"></i>
                             </button>
+
+                            @php
+                                $id = Auth::user()->id;
+                                $adminData = App\Models\User::find($id);
+                            @endphp
+
+
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                                 <div class="px-lg-2">
                                     <div class="row g-0">
@@ -107,7 +114,7 @@
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="{{asset('backend/assets/images/users/avatar-1.jpg')}} "
                                     alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ms-1">Julia</span>
+                                <span class="d-none d-xl-inline-block ms-1">{{ $adminData->name }}</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
