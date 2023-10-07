@@ -11,8 +11,10 @@
 
                         <h4 class="card-title">Home Slide Page</h4>
 
-                        <form method="POST" action="{{ route('store.profile') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('update.slider', $homeslide->id ?? '') }}" enctype="multipart/form-data">
                            @csrf
+
+                           <input type="hidden" name="id" value="{{ $homeslide->id ?? '' }}">
 
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
@@ -46,7 +48,7 @@
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                   <img id="showImage" src="{{ (!empty($homeslide->home_slide ?? ''))? url('upload/home_slide/'.$homeslide->home_slide ?? '' ) : url('upload/no_image.jpg') }}" alt="" class="round avatar-lg">
+                                   <img id="showImage" src="{{ (!empty($homeslide->home_slide ?? ''))? url($homeslide->home_slide ?? '' ) : url('upload/no_image.jpg') }}" alt="" class="round avatar-lg">
                                 </div>
                             </div>
 
