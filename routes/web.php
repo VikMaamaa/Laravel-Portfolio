@@ -57,6 +57,7 @@ Route::controller(AboutController::class)->group(function () {
     Route::post('/about/page', 'UpdateAbout')->name('update.about');
 
 
+    Route::get('/about/multi/image', 'AboutMultiImage')->name('about.multi.image');
 });
 
 require __DIR__.'/auth.php';
