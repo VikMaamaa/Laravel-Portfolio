@@ -58,6 +58,9 @@ Route::controller(AboutController::class)->group(function () {
 
 
     Route::get('/about/multi/image', 'AboutMultiImage')->name('about.multi.image');
+    Route::post('/store/multi/image', 'StoreMultiImage')->name('store.multi.image');
+    Route::get('/all/multi/image', 'AllMultiImage')->name('all.multi.image');
+
 });
 
 require __DIR__.'/auth.php';
