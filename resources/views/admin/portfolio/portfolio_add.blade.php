@@ -20,6 +20,9 @@
                                 <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Name</label>
                                 <div class="col-sm-10">
                                     <input class="form-control" name="portfolio_name" type="text"   id="example-text-input">
+                                    @error('portfolio_name')
+                                        <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -27,6 +30,9 @@
                                 <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Title</label>
                                 <div class="col-sm-10">
                                     <input class="form-control" name="portfolio_title" type="text"   id="example-text-input">
+                                    @error('portfolio_title')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
                                 </div>
                             </div>
 
@@ -46,6 +52,9 @@
                                 <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Image</label>
                                 <div class="col-sm-10">
                                     <input class="form-control" name="portfolio_image" type="file"   id="image">
+                                    @error('portfolio_image')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
                                 </div>
                             </div>
 
@@ -55,6 +64,7 @@
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
                                    <img id="showImage" src="{{  url('upload/no_image.jpg') }}" alt="" class="round avatar-lg">
+
                                 </div>
                             </div>
 
