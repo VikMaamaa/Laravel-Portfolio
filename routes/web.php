@@ -20,7 +20,7 @@ use App\Http\Controllers\Home\PortfolioController;
 
 Route::get('/', function () {
     return view('frontend.index');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('admin.index');
@@ -79,6 +79,7 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::post('/update/portfolio', 'UpdatePortfolio')->name('update.portfolio');
     Route::get('/delete/portfolio/{id}', 'DeletePortfolio')->name('delete.portfolio');
 
+    Route::get('/portfolio/details/{id}', 'PortfolioDetails')->name('portfolio.details');
 
 
 });
