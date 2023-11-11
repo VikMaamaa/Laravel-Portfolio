@@ -10,7 +10,7 @@
         <meta content="Themesdesign" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('/backend/assets/images/favicon.ico')}}">
-
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css" >
         <!-- jquery.vectormap css -->
         <link href="{{asset('/backend/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css')}} " rel="stylesheet" type="text/css" />
 
@@ -195,6 +195,9 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
  <script src="{{ asset('backend/assets/js/code.js') }}"></script>
-    </body>
+
+ <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
+
+</body>
 
 </html>
