@@ -20,7 +20,7 @@
 
                         <h4 class="card-title">Edit Blog Page</h4>
 
-                        <form method="POST" action="{{ route('store.blog') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('update.blog') }}" enctype="multipart/form-data">
                            @csrf
 
                             <input type="hidden" name="id" value="{{ $blogs->id }}">
@@ -85,7 +85,8 @@
                             <div class="row mb-3">
                                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                   <img id="showImage" src="{{  url('upload/no_image.jpg') }}" alt="" class="round avatar-lg">
+                                   {{-- <img id="showImage" src="{{  url('upload/no_image.jpg') }}" alt="" class="round avatar-lg"> --}}
+                                   <img id="showImage" src="{{  asset($blogs->blog_image) }}" alt="" class="round avatar-lg">
 
                                 </div>
                             </div>
