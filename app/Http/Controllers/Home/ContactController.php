@@ -31,4 +31,21 @@ class ContactController extends Controller
 
         return redirect()->back()->with($notifications);
     }//end method
+
+    public function ContactMessage() {
+        $contacts = Contact::latest()->get();
+
+        return view('admin.contact.allcontact', compact('contacts'));
+    }//end method
+
+    public function DeleteMessage($id) {
+        Contact::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Your Message Deleted Successfullly',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+    }//end method
 }
