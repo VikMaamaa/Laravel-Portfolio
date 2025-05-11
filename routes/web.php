@@ -84,6 +84,7 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::get('/delete/portfolio/{id}', 'DeletePortfolio')->name('delete.portfolio');
 
     Route::get('/portfolio/details/{id}', 'PortfolioDetails')->name('portfolio.details');
+    Route::get('/portfolio', 'HomePortfolio')->name('home.portfolio');
 
 
 });
@@ -124,7 +125,6 @@ Route::controller(ContactController::class)->group(function() {
     Route::post('/store/message', 'StoreMessage')->name('store.message');
     Route::get('/contact/message', 'ContactMessage')->name('contact.message');
     Route::get('/delete/message/{id}', 'DeleteMessage')->name('delete.message');
-
 });
 
 require __DIR__.'/auth.php';
