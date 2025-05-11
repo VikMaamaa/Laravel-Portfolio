@@ -1,4 +1,7 @@
 @extends('frontend.main_master')
+@section('title')
+Contact | EasyLearning Website
+@endsection
 @section('main')
 
 <main>
