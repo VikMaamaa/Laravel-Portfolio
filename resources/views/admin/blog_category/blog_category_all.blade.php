@@ -35,12 +35,10 @@
 
 
                             <tbody>
-                                @php
-                                    $i = 1
-                                @endphp
-                                @foreach ($blogcategory as $item)
+
+                                @foreach ($blogcategory as $key => $item)
                                 <tr>
-                                    <td>{{ $i++ }}</td>
+                                    <td>{{ ++$key }}</td>
                                     <td>{{ $item->blog_category}}</td>
                                     <td>
                                         <a href="{{ route('edit.blog.category', $item->id) }}" class="btn btn-info sm" title="Edit Data">
