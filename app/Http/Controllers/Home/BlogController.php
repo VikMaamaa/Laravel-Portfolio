@@ -117,6 +117,7 @@ class BlogController extends Controller
     }// End Method
 
 
+
     public function CategoryBlog($id) {
         $blogpost = Blog::where('blog_category_id', $id)->orderBy('id', 'DESC')->get();
         $allblogs = Blog::latest()->limit(5)->get();
